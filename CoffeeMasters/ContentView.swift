@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var body: some View {
+        Offer(title: "Offer 1", description: "Description1")
+    }
+}
+
+struct Greeting: View {
+    @State var name = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TextField("Enter your name", text: $name)
+            Text("Hello \(name)")
         }
-        .padding()
     }
 }
 
